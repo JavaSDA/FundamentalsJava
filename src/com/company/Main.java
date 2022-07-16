@@ -1,6 +1,6 @@
 package com.company;
 
-import com.company.helpertest.Test;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -23,6 +23,15 @@ public class Main {
     // Package
     // A package is a unique way of identifying the exact class being spoken about.
 
+    // Main method is the primary entry point to a java program.
+
+    // A method is simply a behavioural description of a class.
+
+    // Post and pre incrementation and decrementation
+    // i++/i-- - post - equal to i = i + 1
+    // ++i/--i - pre - same as post
+
+
     public static void main(String[] args) {
 	// write your code here
 /*        Scanner scanner = new Scanner(System.in);
@@ -33,16 +42,21 @@ public class Main {
 
         System.out.println(name);*/
 
-        System.out.println("The number of even numbers is: " + Exercises.getNumberOfEven());
+        /*int[] nums = {4, 3, 8, 9};
+        int[] result = new int[nums.length];
+
+
+
+
+        for(int i = 0; i < nums.length; i++) {
+            nums[i] = ++nums[i];
+        }
+        System.out.println(Arrays.toString(nums));*/
+
+
+
+        System.out.println(Exercises.getNumberOfEven());
+        System.out.println(Exercises.getNumberOfEven());
     }
 
-    public void getNothing() {
-        Test testObject = new Test();
-        testObject.getSomething(); // instance method in use
-
-
-        Test.getSomethingElse(); // static method in use.
-
-
-    }
 }
