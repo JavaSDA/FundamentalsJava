@@ -37,10 +37,22 @@ public class Exercises {
         return evenCounter;
     }
 
-//    public static int
-
-    // 30 mins + 10 mins break
+    // 30 mins break
     // Create a method to find the smallest number from a series of numbers entered by a user without using
     // any min methods defined by Default in Java.
+
+    public static int getSmallest() {
+        int[] numbers = getArrayDataFromUser(); // retrieve data from the user
+
+        int smallest = numbers[0]; // initialize it to the first element to use as the basis for comparison.
+
+        for(int i = 0; i < numbers.length; i++) {
+            if (smallest > numbers[i]) { // if the current value is bigger than our current smallest
+                smallest = numbers[i]; // set that value as the new smallest
+            }
+        }
+
+        return smallest;
+    }
 
 }

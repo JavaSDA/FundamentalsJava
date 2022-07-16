@@ -53,10 +53,10 @@ public class Main {
         }
         System.out.println(Arrays.toString(nums));*/
 
+        /* Exercies Execution */
 
-
-        System.out.println(Exercises.getNumberOfEven());
-        System.out.println(Exercises.getNumberOfEven());
+//        System.out.println(Exercises.getNumberOfEven());
+        System.out.println("The smallest number is: " + Exercises.getSmallest());
     }
 
 }
