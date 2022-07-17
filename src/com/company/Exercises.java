@@ -11,7 +11,7 @@ public class Exercises {
 
     private static Scanner scanner = new Scanner(System.in); // Field
 
-    public static int[] getArrayDataFromUser(int ...params) {
+    public static int[] getArrayDataFromUser() {
         System.out.print("How many numbers do you want to enter?: ");
         int numOfNums = scanner.nextInt(); //
 
@@ -121,4 +121,21 @@ public class Exercises {
         return sum / words.length; // return the average
     }
 
+    // 30 mins
+    // Write a method to search through a series of strings entered by the user
+    // and return true or a similar output if the string 'pancake' is found in the array.
+
+    public static boolean getPancake() {
+        String[] words = getStringArrayDataFromUser(); // retrieve data from user
+
+        for (String word : words) { // loop through users data
+            if (word.equalsIgnoreCase("pancake")) {
+                // check if the word equals 'pancake'
+                return true;
+            }
+        }
+
+        // if it gets here then the word wasn't found.
+        return false;
+    }
 }

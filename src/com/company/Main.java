@@ -34,6 +34,12 @@ public class Main {
     // Method overloading is a way to write multiple methods to do the same or similar things
     // using the same name but a different method signature.
 
+    // A ternary operator is a conditional operator that's typically a single-liner.
+    // 5 == 6 ? "true" : false
+    // The use cases for a ternary operator are:
+    // - when you're returning something
+    // - you're saving a value to a variable based on a condition.
+
 
     public static void main(String[] args) {
 	// write your code here
@@ -62,7 +68,8 @@ public class Main {
 //        System.out.println("The smallest number is: " + Exercises.getSmallest());
 
 //        System.out.println("The number of vowels is: " + Exercises.getVowelCount());
-        System.out.println("The average length of the words is: " + Exercises.getAverageLength());
+//        System.out.println("The average length of the words is: " + Exercises.getAverageLength());
+        System.out.println(Exercises.getPancake() ? "Pancake found" : "Pancake not found");
     }
 
 }
