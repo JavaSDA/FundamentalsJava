@@ -69,7 +69,12 @@ public class Main {
 
 //        System.out.println("The number of vowels is: " + Exercises.getVowelCount());
 //        System.out.println("The average length of the words is: " + Exercises.getAverageLength());
-        System.out.println(Exercises.getPancake() ? "Pancake found" : "Pancake not found");
+//        System.out.println(Exercises.getPancake() ? "Pancake found" : "Pancake not found");
+
+        Exercises exercises = new Exercises();
+        exercises.getAverageLength();
+
+        System.out.println("The percentage of Odd numbers is: " + Exercises.getPercentageOdd() + "%");
     }
 
 }

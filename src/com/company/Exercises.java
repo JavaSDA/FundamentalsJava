@@ -108,7 +108,7 @@ public class Exercises {
     // - that accepts a series of strings from the user and returns it as a string array
     // - Returns the average length from an array of strings passed into it.
 
-    public static float getAverageLength() {
+    public float getAverageLength() {
         String[] words = getStringArrayDataFromUser();
 
         // initialize a sum variable
@@ -137,5 +137,28 @@ public class Exercises {
 
         // if it gets here then the word wasn't found.
         return false;
+    }
+
+    // Write a method to return the percentage of odd numbers present in a dataset
+    // entered by the user.
+
+    public static float getPercentageOdd() {
+        // Retrieve data from the user
+        int[] numbers = getArrayDataFromUser();
+
+        float oddCount = 0; // Initialize oddCount to 0 to sum up the number of oddNumbers
+
+        for (int number : numbers) {
+            if (number % 2 != 0) { // Check for odd numbers
+                oddCount++; // Increase odd count by 1
+            }
+        }
+
+        // (value / total) * 100 - Percentage
+        float percent = (oddCount / numbers.length) * 100;
+
+        // return the value
+        return percent;
+
     }
 }
