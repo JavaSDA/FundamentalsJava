@@ -31,6 +31,9 @@ public class Main {
     // i++/i-- - post - equal to i = i + 1
     // ++i/--i - pre - same as post
 
+    // Method overloading is a way to write multiple methods to do the same or similar things
+    // using the same name but a different method signature.
+
 
     public static void main(String[] args) {
 	// write your code here
@@ -56,7 +59,10 @@ public class Main {
         /* Exercies Execution */
 
 //        System.out.println(Exercises.getNumberOfEven());
-        System.out.println("The smallest number is: " + Exercises.getSmallest());
+//        System.out.println("The smallest number is: " + Exercises.getSmallest());
+
+//        System.out.println("The number of vowels is: " + Exercises.getVowelCount());
+        System.out.println("The average length of the words is: " + Exercises.getAverageLength());
     }
 
 }

@@ -11,7 +11,7 @@ public class Exercises {
 
     private static Scanner scanner = new Scanner(System.in); // Field
 
-    public static int[] getArrayDataFromUser() {
+    public static int[] getArrayDataFromUser(int ...params) {
         System.out.print("How many numbers do you want to enter?: ");
         int numOfNums = scanner.nextInt(); //
 
@@ -24,6 +24,22 @@ public class Exercises {
 
         return numbers;
     }
+
+    public static String[] getStringArrayDataFromUser() {
+        System.out.print("How many strings do you want to enter?: ");
+        int numOfNums = scanner.nextInt(); //
+
+        String[] words = new String[numOfNums]; // Use the number to create an array
+
+        for (int i = 0; i < words.length; i++) {
+            System.out.print("Enter a string: ");
+            words[i] = scanner.next();
+        }
+
+        return words;
+    }
+
+
 
     public static int getNumberOfEven() {
         int[] numbers = getArrayDataFromUser(); // get data from the user
@@ -53,6 +69,56 @@ public class Exercises {
         }
 
         return smallest;
+    }
+
+    // 30 min
+    // Create a method to count the number of vowels in a String entered by the user and returns that number
+
+    public static int getVowelCount() {
+        System.out.print("Enter a string: ");
+        String userInput = scanner.nextLine(); // Get input from user
+
+        //Initialize Vowel counter to 0
+        int vowelCount = 0;
+
+        // Break the user string into characters
+        char[] userStringArr = userInput.toLowerCase().toCharArray(); // convert the letters to lower case first before
+        // you break it into an array.
+
+        for(int i = 0; i < userStringArr.length; i++) {
+            char currentChar = userStringArr[i];
+
+            // Check if the current char is a vowel, if so increment the vowel counter
+            switch (currentChar) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    vowelCount++;
+                    break;
+            }
+        }
+
+        return vowelCount;
+    }
+
+    // 40 mins
+    // Write 2 methods:
+    // - that accepts a series of strings from the user and returns it as a string array
+    // - Returns the average length from an array of strings passed into it.
+
+    public static float getAverageLength() {
+        String[] words = getStringArrayDataFromUser();
+
+        // initialize a sum variable
+        float sum = 0;
+
+        for(String word : words) {
+            sum += word.length(); // repeatedly add each string's length to the array
+        }
+
+        return sum / words.length; // return the average
     }
 
 }
