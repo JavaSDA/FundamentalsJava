@@ -12,16 +12,19 @@ public class Exercises {
     private static Scanner scanner = new Scanner(System.in); // Field
 
     public static int[] getArrayDataFromUser() {
-        System.out.print("How many numbers do you want to enter?: ");
-        int numOfNums = scanner.nextInt(); //
+        // Prompt the user for input
+//        System.out.print("How many numbers do you want to enter?: ");
+//        int numOfNums = scanner.nextInt(); // number of integers / length of the array
 
-        int[] numbers = new int[numOfNums]; // Use the number to create an array
+        int[] numbers = new int[3]; // Use the number to create an array
 
+        // Use a loop to populate the array with the user's input
         for (int i = 0; i < numbers.length; i++) {
-            System.out.print("Enter a number: ");
+            System.out.print("Enter three numbers: ");
             numbers[i] = scanner.nextInt();
         }
 
+        // return the array
         return numbers;
     }
 
@@ -131,6 +134,7 @@ public class Exercises {
         for (String word : words) { // loop through users data
             if (word.equalsIgnoreCase("pancake")) {
                 // check if the word equals 'pancake'
+
                 return true;
             }
         }
@@ -139,10 +143,19 @@ public class Exercises {
         return false;
     }
 
+
+
     // Write a method to return the percentage of odd numbers present in a dataset
     // entered by the user.
 
+    // Get Input from the user - Scanner
+    // Store the numbers somewhere - Array
+    // I need to count the number of odd integers(numbers) - for Loop
+    // Find out percentage of odd numbers
+    // return the value
+
     public static float getPercentageOdd() {
+
         // Retrieve data from the user
         int[] numbers = getArrayDataFromUser();
 
@@ -161,4 +174,111 @@ public class Exercises {
         return percent;
 
     }
+
+    // 35 mins
+    // Write a method that takes the length and width of a rectangle
+    // from the user and finds and returns the perimeter
+
+    // Get the values of the length and width from the user
+    // find the perimeter of the rectangle, formula = 2(l+w)
+    // return the perimeter
+
+    public static int getRectanglePerimeter() {
+        // Get the values of the length and width from the user
+
+        // Prompt the user for length
+        System.out.print("Enter the length of the rectangle: ");
+        int length = scanner.nextInt();
+
+        // Prompt the user for breadth/width
+        System.out.print("Enter the width of the rectangle: ");
+        int breadth = scanner.nextInt();
+
+        // find the perimeter of the rectangle, formula = 2(l+w)
+        int perimeter = 2 * (length + breadth);
+
+        // return the perimeter
+        return perimeter;
+    }
+
+
+    // 35 mins
+    // Write a program that takes a word or a string from the user
+    // and returns its reverse
+
+    public static String getReverse() {
+        // get Input from the user
+
+        //Prompt the user
+        System.out.print("Enter a string: ");
+        String word = scanner.next();
+
+        // Initialize string to hold reverse
+        String reverse = "";
+
+        // Break string down into an array of characters
+        char[] wordArray = word.toCharArray();
+
+        for (int i = wordArray.length - 1; i > -1; i--) {
+            // append the characters to the reverse string in reverse order
+            reverse += wordArray[i];
+        }
+
+        return reverse;
+    }
+
+    // 35 mins.
+    // Write a method to return 3rd smallest numb
+    // er from a set of 5 numbers entered
+    // by the user. N.B: Do not use Arrays.sort()
+
+    // Get data from the user
+    // Store in an array
+    // sort the array
+    // Get the third item in the array
+    // return it.
+
+    // [9, 4, 9, 5]
+    public static int getThirdSmallest() {
+        int[] numbers =  getArrayDataFromUser();
+
+        int temp;
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = i + 1; j < numbers.length; j++) {
+                if (numbers[i] > numbers[j]) {
+                    temp = numbers[i];
+                    numbers[i] = numbers[j];
+                    numbers[j] = temp;
+                }
+            }
+        }
+
+        return numbers[2];
+    }
+
+    // 35 mins
+    // Write a method to find the area of a circle with the radius received from a user.
+
+    // 35 mins
+    // Write a method that takes a set of 3 numbers from the user and returns true if
+    // the addition of all three numbers is less than 100, else it returns false.
+
+    public static boolean isSmallerThanHundred() {
+        // Get input from the user
+        int[] numbers = getArrayDataFromUser();
+
+        // Find the sum
+        // Initialize sum variable to 0
+        int sum = 0;
+
+        // loop through the array and find the sum of the numbers
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+
+        if (sum > 100) return false;
+
+        return true;
+    }
+
 }

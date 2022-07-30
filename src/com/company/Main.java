@@ -11,6 +11,11 @@ public class Main {
 
     // public and private are examples of access modifiers
 
+    // loops
+    // for loop - best suited for situations where I have a definite number of times it should run
+    // while loop - best suited for situations where I don't have a definite number of times it should run
+
+
     // instance vs static
     // For your instance methods or fields, you can only interact with them if you're working
     // with an object instantiated using the class
@@ -40,7 +45,14 @@ public class Main {
     // - when you're returning something
     // - you're saving a value to a variable based on a condition.
 
+    // - one-line comment - cmd + / (mac), ctrl + / (windows)
+    /* multi-line comment - cmd + options + / (mac), ctrl + shift + / (windows)*/
 
+
+    /**
+     * Documentation comment
+     * @param args
+     */
     public static void main(String[] args) {
 	// write your code here
 /*        Scanner scanner = new Scanner(System.in);
@@ -71,10 +83,13 @@ public class Main {
 //        System.out.println("The average length of the words is: " + Exercises.getAverageLength());
 //        System.out.println(Exercises.getPancake() ? "Pancake found" : "Pancake not found");
 
-        Exercises exercises = new Exercises();
-        exercises.getAverageLength();
+//        System.out.println("The perimeter of the rectangle is: " + Exercises.getRectanglePerimeter());
+        System.out.println("The reverse of the string is: " + Exercises.getReverse());
 
-        System.out.println("The percentage of Odd numbers is: " + Exercises.getPercentageOdd() + "%");
+//        Exercises exercises = new Exercises();
+//        exercises.getAverageLength();
+
+//        System.out.println("The percentage of Odd numbers is: " + Exercises.getPercentageOdd() + "%");
     }
 
 }
