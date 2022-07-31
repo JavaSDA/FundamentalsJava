@@ -13,14 +13,14 @@ public class Exercises {
 
     public static int[] getArrayDataFromUser() {
         // Prompt the user for input
-//        System.out.print("How many numbers do you want to enter?: ");
-//        int numOfNums = scanner.nextInt(); // number of integers / length of the array
+        System.out.print("How many numbers do you want to enter?: ");
+        int numOfNums = scanner.nextInt(); // number of integers / length of the array
 
-        int[] numbers = new int[3]; // Use the number to create an array
+        int[] numbers = new int[numOfNums]; // Use the number to create an array
 
         // Use a loop to populate the array with the user's input
         for (int i = 0; i < numbers.length; i++) {
-            System.out.print("Enter three numbers: ");
+            System.out.print("Enter a numbers: ");
             numbers[i] = scanner.nextInt();
         }
 
@@ -41,7 +41,6 @@ public class Exercises {
 
         return words;
     }
-
 
 
     public static int getNumberOfEven() {
@@ -65,7 +64,7 @@ public class Exercises {
 
         int smallest = numbers[0]; // initialize it to the first element to use as the basis for comparison.
 
-        for(int i = 0; i < numbers.length; i++) {
+        for (int i = 0; i < numbers.length; i++) {
             if (smallest > numbers[i]) { // if the current value is bigger than our current smallest
                 smallest = numbers[i]; // set that value as the new smallest
             }
@@ -88,7 +87,7 @@ public class Exercises {
         char[] userStringArr = userInput.toLowerCase().toCharArray(); // convert the letters to lower case first before
         // you break it into an array.
 
-        for(int i = 0; i < userStringArr.length; i++) {
+        for (int i = 0; i < userStringArr.length; i++) {
             char currentChar = userStringArr[i];
 
             // Check if the current char is a vowel, if so increment the vowel counter
@@ -111,23 +110,6 @@ public class Exercises {
     // - that accepts a series of strings from the user and returns it as a string array
     // - Returns the average length from an array of strings passed into it.
 
-    public float getAverageLength() {
-        String[] words = getStringArrayDataFromUser();
-
-        // initialize a sum variable
-        float sum = 0;
-
-        for(String word : words) {
-            sum += word.length(); // repeatedly add each string's length to the array
-        }
-
-        return sum / words.length; // return the average
-    }
-
-    // 30 mins
-    // Write a method to search through a series of strings entered by the user
-    // and return true or a similar output if the string 'pancake' is found in the array.
-
     public static boolean getPancake() {
         String[] words = getStringArrayDataFromUser(); // retrieve data from user
 
@@ -143,16 +125,9 @@ public class Exercises {
         return false;
     }
 
-
-
-    // Write a method to return the percentage of odd numbers present in a dataset
-    // entered by the user.
-
-    // Get Input from the user - Scanner
-    // Store the numbers somewhere - Array
-    // I need to count the number of odd integers(numbers) - for Loop
-    // Find out percentage of odd numbers
-    // return the value
+    // 30 mins
+    // Write a method to search through a series of strings entered by the user
+    // and return true or a similar output if the string 'pancake' is found in the array.
 
     public static float getPercentageOdd() {
 
@@ -175,13 +150,15 @@ public class Exercises {
 
     }
 
-    // 35 mins
-    // Write a method that takes the length and width of a rectangle
-    // from the user and finds and returns the perimeter
 
-    // Get the values of the length and width from the user
-    // find the perimeter of the rectangle, formula = 2(l+w)
-    // return the perimeter
+    // Write a method to return the percentage of odd numbers present in a dataset
+    // entered by the user.
+
+    // Get Input from the user - Scanner
+    // Store the numbers somewhere - Array
+    // I need to count the number of odd integers(numbers) - for Loop
+    // Find out percentage of odd numbers
+    // return the value
 
     public static int getRectanglePerimeter() {
         // Get the values of the length and width from the user
@@ -201,10 +178,13 @@ public class Exercises {
         return perimeter;
     }
 
-
     // 35 mins
-    // Write a program that takes a word or a string from the user
-    // and returns its reverse
+    // Write a method that takes the length and width of a rectangle
+    // from the user and finds and returns the perimeter
+
+    // Get the values of the length and width from the user
+    // find the perimeter of the rectangle, formula = 2(l+w)
+    // return the perimeter
 
     public static String getReverse() {
         // get Input from the user
@@ -227,20 +207,14 @@ public class Exercises {
         return reverse;
     }
 
-    // 35 mins.
-    // Write a method to return 3rd smallest numb
-    // er from a set of 5 numbers entered
-    // by the user. N.B: Do not use Arrays.sort()
 
-    // Get data from the user
-    // Store in an array
-    // sort the array
-    // Get the third item in the array
-    // return it.
+    // 35 mins
+    // Write a program that takes a word or a string from the user
+    // and returns its reverse
 
     // [9, 4, 9, 5]
     public static int getThirdSmallest() {
-        int[] numbers =  getArrayDataFromUser();
+        int[] numbers = getArrayDataFromUser();
 
         int temp;
         for (int i = 0; i < numbers.length; i++) {
@@ -256,12 +230,16 @@ public class Exercises {
         return numbers[2];
     }
 
-    // 35 mins
-    // Write a method to find the area of a circle with the radius received from a user.
+    // 35 mins.
+    // Write a method to return 3rd smallest numb
+    // er from a set of 5 numbers entered
+    // by the user. N.B: Do not use Arrays.sort()
 
-    // 35 mins
-    // Write a method that takes a set of 3 numbers from the user and returns true if
-    // the addition of all three numbers is less than 100, else it returns false.
+    // Get data from the user
+    // Store in an array
+    // sort the array
+    // Get the third item in the array
+    // return it.
 
     public static boolean isSmallerThanHundred() {
         // Get input from the user
@@ -280,5 +258,73 @@ public class Exercises {
 
         return true;
     }
+
+    // 35 mins
+    // Write a method to find the area of a circle with the radius received from a user.
+
+    // 35 mins
+    // Write a method that takes a set of 3 numbers from the user and returns true if
+    // the addition of all three numbers is less than 100, else it returns false.
+
+    public static void getDifference() {
+        int[] numbers = getArrayDataFromUser();
+
+        // Sum the elements in the array
+        int sum = 0;
+
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i]; // sum = sum + numbers[i]
+        }
+
+        // Find the square
+        double square = Math.pow(sum, 2); // sum * sum
+
+        System.out.println("The square is: " + square);
+        // Find the square root
+        double squareroot = Math.sqrt(sum); // Math.pow(sum, 0.5)
+        System.out.println("The square is: " + squareroot);
+
+        System.out.println(Math.abs(squareroot - square));
+    }
+
+    // 35 mins
+    // Write a method to find the square and square root of a sum of
+    // 4 numbers entered by the user and return the difference
+    // between the square and the square root
+
+    // Get user input - array of 4 numbers
+    // sum the numbers
+    // Find the square and square root of the sum - Math.pow, Math.sqrt
+    // return the difference
+
+    public float getAverageLength() {
+        String[] words = getStringArrayDataFromUser();
+
+        // initialize a sum variable
+        float sum = 0;
+
+        for (String word : words) {
+            sum += word.length(); // repeatedly add each string's length to the array
+        }
+
+        return sum / words.length; // return the average
+    }
+
+
+    // 30 mins
+    // Write a method that takes a string from the user and returns true when
+    // it is checked that the string entered by the user reads the same forwards and
+    // backwards, in other words, it is a PALINDROME. N.B: Your method should not be case-sensitive
+    // mama -> amam -> false
+    // madam -> madam -> true
+    // papa -> apap
+
+    // 35 mins.
+    // Write a method that accepts a year from the user and returns a result
+    // informing the user if the year is a leap or not.
+    // N.B: A leap year is a year that divisible by 4, or 400 but not necessarily just 100.
+    // Year, 2016 => 2016 is a leap year.
+    // Year, 2000 => 2000 is a leap
+    // Year, 2200 => 2200 is not a leap year.
 
 }

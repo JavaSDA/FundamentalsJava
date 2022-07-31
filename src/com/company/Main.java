@@ -15,6 +15,9 @@ public class Main {
     // for loop - best suited for situations where I have a definite number of times it should run
     // while loop - best suited for situations where I don't have a definite number of times it should run
 
+    // Break vs Continue
+    // Break stops the execution entirely or in other words terminates
+    // the loop while Continue skips an iteration
 
     // instance vs static
     // For your instance methods or fields, you can only interact with them if you're working
@@ -74,6 +77,13 @@ public class Main {
         }
         System.out.println(Arrays.toString(nums));*/
 
+//        for (int i = 1; i < 10; i++) {
+//            if (i == 5) {
+//                continue;
+//            }
+//            System.out.println(i);
+//        }
+
         /* Exercies Execution */
 
 //        System.out.println(Exercises.getNumberOfEven());
@@ -84,12 +94,18 @@ public class Main {
 //        System.out.println(Exercises.getPancake() ? "Pancake found" : "Pancake not found");
 
 //        System.out.println("The perimeter of the rectangle is: " + Exercises.getRectanglePerimeter());
-        System.out.println("The reverse of the string is: " + Exercises.getReverse());
+//        System.out.println("The reverse of the string is: " + Exercises.getReverse());
 
-//        Exercises exercises = new Exercises();
-//        exercises.getAverageLength();
+        Exercises exercises = new Exercises();
+        exercises.getAverageLength();
+
+
+        Exercises exercises1 = new Exercises();
+
 
 //        System.out.println("The percentage of Odd numbers is: " + Exercises.getPercentageOdd() + "%");
+
+//        System.out.println("The difference is: " + Exercises.getDifference());
     }
 
 }
